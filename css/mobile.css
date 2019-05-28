@@ -18,13 +18,31 @@ h1{
     font-family: 'Courier New', Courier, monospace;
 }
 
+
+.importance-input{
+    width: 18px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.sort, .sort option{
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+
 button{
     background-color: black;
     color: lightblue;
     border: darkblue;
     border-radius: 5px;
     font-weight: bold;
-    opacity: 0.8;
+    opacity: 0.7;
+    margin: 1px;
+}
+button:hover{
+    opacity: 1;
+    transition: 2s;
 }
 
 .done {

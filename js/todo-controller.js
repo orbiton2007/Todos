@@ -13,8 +13,12 @@ function renderTodos() {
         if (!todo.importance) todo.importance = 1;
         var className = (todo.isDone) ? 'done' : '';
         return `<li class="${className}" onclick="onToggleTodo('${todo.id}')">
-        ${todo.txt}, created at ${todo.createdAt}, Importance: <input placeholder="${todo.importance}" onclick="onGetImportance(event, this, ${idx})" type="number" min="1" max="3" value="">  
-        <button onclick="onDeleteTodo(event, '${todo.id}')">x</button><span class="buttons-${todo.id}"></span>
+        ${todo.txt}, created at ${todo.createdAt}, Importance: <div class="btn-group" role="group" aria-label="First group">
+        <button type="button" onclick="onGetImportance(event, this, ${idx})">-</button>
+        <input class="importance-input" placeholder="${todo.importance}">
+        <button type="button" onclick="onGetImportance(event, this, ${idx})">+</button>
+        
+        <button onclick="onDeleteTodo(event, '${todo.id}')">x</button><span class="buttons-${todo.id}"></span></div>
         </li>`
     })
 
@@ -78,7 +82,16 @@ function onSetFilter(elBtn) {
 
 function onGetImportance(ev, elBtn, idx) {
     ev.stopPropagation();
-    gTodos[idx].importance = +elBtn.value;
+
+    if (elBtn.textContent === '-') {
+        if (gTodos[idx].importance === 1) return;
+        --gTodos[idx].importance;
+    } else {
+        if (gTodos[idx].importance === 9) return;
+        ++gTodos[idx].importance;
+    }
+    document.querySelector('.importance-input').textContent = gTodos[idx].importance;
+    renderTodos();
     saveTodos();
 }
 

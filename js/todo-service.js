@@ -18,11 +18,13 @@ function createTodos() {
 
 function createTodo(txt) {
     var date = new Date(Date.now());
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
     return {
         id: makeId(),
         txt: txt,
         isDone: false,
-        createdAt: date.getHours() + ':' + date.getMinutes() + ' ' + date.toLocaleDateString('en-IL'),
+        createdAt: ((hours >= 1 && hours < 10) ? '0' + hours : hours) + ':' + ((minutes >= 1 && minutes < 10) ? '0' + minutes : minutes) + ' ' + date.toLocaleDateString('en-IL'),
         timeForSort: Date.now()
     }
 }
