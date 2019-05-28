@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body onload="onInit()">
+    <h1>Todos</h1>
+    <button class="add-button" onclick="onAddTodo()">Add Todo</button>
+    <section class="filter-container">
+        <h3>Sort by:</h3>
+        <select onchange="onSetSort(this.value)" class="sort">
+            <option>Time</option>
+            <option>Text</option>
+            <option>Importance</option>
+        </select>
+        <h3><span class="left-todo"></span>&emsp;&emsp;&emsp;
+            <span class="filter-choice" onclick="onSetFilter(this)">All</span>&emsp;
+            <span class="filter-choice" onclick="onSetFilter(this)">Active</span>&emsp;
+            <span class="filter-choice" onclick="onSetFilter(this)">Done</span>
+        </h3>
+    </section>
+    <p class="message"></p>
+    <ul class="todo-list">
+
+    </ul>
+    <section class="stats-container">
+        <h2>
+            Total todos: <span class="total-count"></span>
+            Active: <span class="active-count"></span>
+        </h2>
+    </section>
+
+    <script src="js/util-service.js"></script>
+    <script src="js/todo-service.js"></script>
+    <script src="js/todo-controller.js"></script>
+</body>
+
+</html>

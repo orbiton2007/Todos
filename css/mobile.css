@@ -1,0 +1,55 @@
+body{
+    background-color: #fff;
+    background-size: 100% 1.2em;
+    background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                    -webkit-linear-gradient(#eee .05em, transparent .05em);
+    background-image: -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                    -moz-linear-gradient(#eee .05em, transparent .05em);
+    background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+                    linear-gradient(#eee .05em, transparent .05em);
+    background: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px) 0 0 / 100% 1.2em,
+                    linear-gradient(#eee .05em, transparent .05em) 0 0 / 100% 1.2em #fff;
+    behavior: url(/pie/PIE.htc);
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    background-color: black;
+    color: lightblue;
+    border: darkblue;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.filter-container {
+    background-color: lightblue;
+    padding: 2px;
+}
+
+.todo-list, .message{
+    font-size: 0.8rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-left: 83px;
+}
+.stats-container {
+    background-color: lightgoldenrodyellow;
+}
+
+.stats-container span {
+    color: orange;
+}
+
+.filter-choice{
+    cursor: pointer;
+}
