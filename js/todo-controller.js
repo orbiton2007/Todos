@@ -47,7 +47,8 @@ function renderButtons() {
             var strHTML = `<button onclick="onMoveTodo(event, this, '${todo.id}')">Up</button>`;
             document.querySelector(`.buttons-${todo.id}`).innerHTML = strHTML;
         } else {
-            var strHTML = `<button onclick="onMoveTodo(event, this, '${todo.id}')">Down</button><button onclick="onMoveTodo(event, this, '${todo.id}')">Up</button>`;
+            var strHTML = `<button onclick="onMoveTodo(event, this, '${todo.id}')">Down</button>
+            <button onclick="onMoveTodo(event, this, '${todo.id}')">Up</button>`;
             document.querySelector(`.buttons-${todo.id}`).innerHTML = strHTML;
         }
     });
@@ -55,7 +56,7 @@ function renderButtons() {
 
 
 function onAddTodo() {
-    var txt = prompt('What todo?');
+    var txt = document.querySelector('.todo-input').value;
     if (!txt) return;
     addTodo(txt);
     onSetSort(gSortBy);

@@ -6,34 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todos</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body onload="onInit()">
+    <nav class="navbar navbar-dark bg-dark">
+        <form>
+            <button class="add-button" onclick="onAddTodo()">Add Todo</button>
+            <input type="text" class="todo-input" placeholder="What to do?">
+        </form>
+    </nav>
     <h1>Todos</h1>
-    <button class="add-button" onclick="onAddTodo()">Add Todo</button>
-    <section class="filter-container">
-        <h3>Sort by:</h3>
-        <select onchange="onSetSort(this.value)" class="sort">
-            <option>Time</option>
-            <option>Text</option>
-            <option>Importance</option>
-        </select>
-        <h3><span class="left-todo"></span>&emsp;&emsp;&emsp;
-            <span class="filter-choice" onclick="onSetFilter(this)">All</span>&emsp;
-            <span class="filter-choice" onclick="onSetFilter(this)">Active</span>&emsp;
-            <span class="filter-choice" onclick="onSetFilter(this)">Done</span>
-        </h3>
-    </section>
+    <div class="first-div">
+        <section class="filter-container">
+            <h3 class="sort-by">Sort by:</h3>
+            <select onchange="onSetSort(this.value)" class="sort">
+                <option>Time</option>
+                <option>Text</option>
+                <option>Importance</option>
+            </select>
+            <h3><span class="left-todo"></span>&emsp;
+                <span class="filter-choice" onclick="onSetFilter(this)">All</span>
+                <span class="filter-choice" onclick="onSetFilter(this)">Active</span>
+                <span class="filter-choice" onclick="onSetFilter(this)">Done</span>
+            </h3>
+        </section>
+    </div>
     <p class="message"></p>
     <ul class="todo-list">
 
     </ul>
     <section class="stats-container">
-        <h2>
-            Total todos: <span class="total-count"></span>
-            Active: <span class="active-count"></span>
-        </h2>
+        <h4> Total todos:</Total> <span class="total-count"></span>
+            Active: <span class="active-count"></span></h4>
     </section>
 
     <script src="js/util-service.js"></script>

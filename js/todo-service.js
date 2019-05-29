@@ -24,7 +24,7 @@ function createTodo(txt) {
         id: makeId(),
         txt: txt,
         isDone: false,
-        createdAt: ((hours >= 1 && hours < 10) ? '0' + hours : hours) + ':' + ((minutes >= 1 && minutes < 10) ? '0' + minutes : minutes) + ' ' + date.toLocaleDateString('en-IL'),
+        createdAt: ((hours >= 0 && hours < 10) ? '0' + hours : hours) + ':' + ((minutes >= 0 && minutes < 10) ? '0' + minutes : minutes) + ' ' + date.toLocaleDateString('en-IL'),
         timeForSort: Date.now()
     }
 }
@@ -103,10 +103,10 @@ function sortByImportance() {
 
 function printMsg(todos) {
 
-    if (todos.length === 0) var strHTML = '<p>No todos</p>';
+    if (todos.length === 0) var strHTML = '<p>No Todos</p>';
     else {
         if (document.querySelector('.active-count').textContent === '0') var strHTML = '<p>No Active Todos</p>';
-        else var strHTML = '<p>No Done Todos All</p>';
+        else var strHTML = '<p>No Done All Todos</p>';
     }
 
     document.querySelector('.message').innerHTML = strHTML;

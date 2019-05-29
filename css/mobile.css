@@ -1,6 +1,4 @@
 body{
-    background-color: #fff;
-    background-size: 100% 1.2em;
     background-image: -webkit-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
                     -webkit-linear-gradient(#eee .05em, transparent .05em);
     background-image: -moz-linear-gradient(0deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
@@ -10,18 +8,32 @@ body{
     background: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px) 0 0 / 100% 1.2em,
                     linear-gradient(#eee .05em, transparent .05em) 0 0 / 100% 1.2em #fff;
     behavior: url(/pie/PIE.htc);
+    margin: 0;
+}
+
+.todo-input{
+    position: fixed;
+    left: 120px;
+    top: 11px;
+}
+
+.first-div{
+    background-color: aliceblue;
+    width: 280px;
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 4rem;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 10px;
 }
 
-
 .importance-input{
-    width: 18px;
-    border-radius: 6px;
+    width: 24px;
+    border-radius: 18px;
     font-weight: bold;
 }
 
@@ -30,19 +42,35 @@ h1{
     font-weight: bold;
 }
 
+.sort-by{
+    color: black;
+    font-size: 1.2rem;
+    margin: 3px;
+}
+
+h3{
+    font-family: cursive;
+    margin: 2px;
+}
+
+h3 span{
+    font-size: 1rem;
+    margin: 0;
+}
 
 button{
     background-color: black;
-    color: lightblue;
+    color: white;
     border: darkblue;
     border-radius: 5px;
     font-weight: bold;
-    opacity: 0.7;
+    opacity: 0.8;
     margin: 1px;
+    padding: 2px 5px;;
 }
 button:hover{
     opacity: 1;
-    transition: 2s;
+    transition: 1s;
 }
 
 .done {
@@ -50,22 +78,30 @@ button:hover{
 }
 
 .filter-container {
-    background-color: lightblue;
     padding: 2px;
 }
 
-.todo-list, .message{
-    font-size: 0.8rem;
-    font-family: 'Courier New', Courier, monospace;
+.message{
+    font-size: 1.1rem;
+    margin-left: 30px;
+    font-family: cursive;
     font-weight: bold;
-    margin-left: 83px;
-}
-.stats-container {
-    background-color: lightgoldenrodyellow;
 }
 
-.stats-container span {
-    color: orange;
+.todo-list{
+    font-family: cursive;
+    margin-left: 10px;
+    font-weight: bold;
+}
+.stats-container {
+    background-color: aliceblue;
+    width: 255px;
+    border-radius: 10px;
+}
+
+.stats-container span{
+    font-size: 1.5rem;
+    color: darkblue;
 }
 
 .filter-choice{

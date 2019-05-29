@@ -1,13 +1,27 @@
 h1{
-    font-size: 3rem;
+    font-size: 4rem;
+}
+
+.first-div{
+    margin-left: 50px;
 }
 
 button{
+    padding: 6px;
+}
+
+.sort-by{
+    font-size: 1.5rem;
+    margin: 3px;
 }
 
 .filter-container {
-    background-color: lightblue;
     padding: 5px;
+}
+
+.message{
+    font-size: 1.5rem;
+    margin-left: 90px;
 }
 
 .todo-list, .message{
@@ -15,3 +29,6 @@ button{
     margin-left: 83px;
 }
 
+.stats-container {
+    margin-left: 50px;
+}
