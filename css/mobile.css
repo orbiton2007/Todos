@@ -19,7 +19,7 @@ body{
 
 .first-div{
     background-color: aliceblue;
-    width: 280px;
+    width: 320px;
 }
 
 h1{
@@ -35,6 +35,7 @@ h1{
     width: 24px;
     border-radius: 18px;
     font-weight: bold;
+    margin: 0 3px;
 }
 
 .sort, .sort option{
@@ -46,27 +47,35 @@ h1{
     color: black;
     font-size: 1.2rem;
     margin: 3px;
+    font-weight: bold;
 }
 
 h3{
-    font-family: cursive;
+    font-family: 'Courier New', Courier, monospace;
     margin: 2px;
 }
 
 h3 span{
     font-size: 1rem;
-    margin: 0;
+    margin-left: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
-
+.btn-down{
+    margin-right: -4px;
+}
+.btn-up{
+    margin-left: 0;
+}
 button{
     background-color: black;
     color: white;
     border: darkblue;
     border-radius: 5px;
     font-weight: bold;
+    margin: 2px;
     opacity: 0.8;
-    margin: 1px;
-    padding: 2px 5px;;
+    padding: 1px 5px;;
 }
 button:hover{
     opacity: 1;
@@ -84,12 +93,12 @@ button:hover{
 .message{
     font-size: 1.1rem;
     margin-left: 30px;
-    font-family: cursive;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
 
 .todo-list{
-    font-family: cursive;
+    font-family: 'Courier New', Courier, monospace;
     margin-left: 10px;
     font-weight: bold;
 }

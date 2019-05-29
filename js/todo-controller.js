@@ -25,9 +25,7 @@ function renderTodos() {
     document.querySelector('.todo-list').innerHTML = strHtmls.join('');
     renderButtons();
     renderStats();
-    printMsg(todos);
 }
-
 
 function renderStats() {
     document.querySelector('.total-count').innerText = getTotalCount();
@@ -41,14 +39,14 @@ function renderButtons() {
     todos.forEach(function (todo, idx) {
         if(!todos.length || todos.length === 1) return;
         if (idx === 0) {
-            var strHTML = `<button onclick="onMoveTodo(event, this, '${todo.id}')">Down</button>`;
+            var strHTML = `<button class="btn-down" onclick="onMoveTodo(event, this, '${todo.id}')">Down</button>`;
             document.querySelector(`.buttons-${todo.id}`).innerHTML = strHTML;
         } else if (idx === todos.length - 1) {
-            var strHTML = `<button onclick="onMoveTodo(event, this, '${todo.id}')">Up</button>`;
+            var strHTML = `<button class="btn-up" onclick="onMoveTodo(event, this, '${todo.id}')">Up</button>`;
             document.querySelector(`.buttons-${todo.id}`).innerHTML = strHTML;
         } else {
-            var strHTML = `<button onclick="onMoveTodo(event, this, '${todo.id}')">Down</button>
-            <button onclick="onMoveTodo(event, this, '${todo.id}')">Up</button>`;
+            var strHTML = `<button class="btn-down" onclick="onMoveTodo(event, this, '${todo.id}')">Down</button>
+            <button class="btn-up" onclick="onMoveTodo(event, this, '${todo.id}')">Up</button>`;
             document.querySelector(`.buttons-${todo.id}`).innerHTML = strHTML;
         }
     });
